@@ -60,6 +60,8 @@ class Test(unittest.TestCase):
             hypothesis = f.read()
         with open("solution_spanish.mp3", "rb") as f:
             reference = f.read()
+        print("Hypothesis length:", len(hypothesis))
+        print("Reference length:", len(reference))
         self.assertEqual(int(len(hypothesis)/1024), int(len(reference)/1024),
                          '''
                          homework12.synthesize, when called with a non-English text string,
